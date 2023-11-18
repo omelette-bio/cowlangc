@@ -31,7 +31,19 @@ pub fn MoO(file : &mut File) {
 }
 
 #[allow(non_snake_case)]
+pub fn Moo(file : &mut File) {
+  print!("{}", file.data[file.data_iterator as usize] as char);
+  file.content_iterator += 1;
+}
+
+#[allow(non_snake_case)]
 pub fn OOM(file : &mut File) {
   print!("{}", file.data[file.data_iterator as usize]);
+  file.content_iterator += 1;
+}
+
+#[allow(non_snake_case)]
+pub fn OOO(file : &mut File) {
+  file.data[file.data_iterator as usize] = 0;
   file.content_iterator += 1;
 }

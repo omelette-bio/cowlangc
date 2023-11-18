@@ -34,7 +34,7 @@ impl Commands {
         println!("mOO");
       },
       Commands::Moo => {
-        println!("Moo");
+        functions::Moo(file);
       },
       Commands::MOo => {
         functions::MOo(file);
@@ -46,7 +46,7 @@ impl Commands {
         println!("MOO");
       },
       Commands::OOO => {
-        println!("OOO");
+        functions::OOO(file);
       },
       Commands::MMM => {
         println!("MMM");
