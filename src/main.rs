@@ -5,6 +5,7 @@ mod commands;
 mod data;
 mod fileparser;
 mod map;
+mod functions;
 
 use mods::Mods;
 // use commands::Commands;

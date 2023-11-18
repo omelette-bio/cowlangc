@@ -1,4 +1,5 @@
 use clap::Subcommand;
+use crate::fileparser::parse_fichier;
 
 #[derive(Subcommand)]
 pub enum Mods {
@@ -21,7 +22,12 @@ impl Mods {
         println!("Compiling {} !", file);
       },
       Mods::Interpret {file} => {
-        println!("Interpreting {} !", file);
+        let mut file = parse_fichier(file.to_string());
+        let cont = file.content.clone();
+        for i in 0..cont.len() {
+          let command = &cont[i];
+          command.run(&mut file);
+        }
       }
     }
   }

@@ -1,6 +1,8 @@
-// use crate::functions::*;
+use crate::functions;
+use crate::data::File;
 
 #[allow(non_camel_case_types)]
+#[derive(Debug, Copy, Clone)]
 pub enum Commands {
   moo,
   mOo,
@@ -17,16 +19,16 @@ pub enum Commands {
 }
 
 impl Commands {
-  pub fn run(&self) {
+  pub fn run(&self, file: &mut File) {
     match self {
       Commands::moo => {
         println!("moo");
       },
       Commands::mOo => {
-        println!("mOo");
+        functions::mOo(file);
       },
       Commands::moO => {
-        println!("moO");
+        functions::moO(file);
       },
       Commands::mOO => {
         println!("mOO");
@@ -35,10 +37,10 @@ impl Commands {
         println!("Moo");
       },
       Commands::MOo => {
-        println!("MOo");
+        functions::MOo(file);
       },
       Commands::MoO => {
-        println!("MoO");
+        functions::MoO(file);
       },
       Commands::MOO => {
         println!("MOO");
@@ -50,7 +52,7 @@ impl Commands {
         println!("MMM");
       },
       Commands::OOM => {
-        println!("OOM");
+        functions::OOM(file);
       },
       Commands::oom => {
         println!("oom");
