@@ -3,7 +3,7 @@ use crate::commands::Commands;
 use crate::data::File;
 use std::rc::Rc;
 
-pub fn parse_fichier(file: String) -> File {
+pub fn parse_file(file: String) -> File {
   let name = file.clone();
   let content = fs::read_to_string(name).expect("Something went wrong reading the file");
   // create vector of strings seperated by spaces and newlines
