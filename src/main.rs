@@ -8,8 +8,6 @@ mod map;
 mod functions;
 
 use mods::Mods;
-// use commands::Commands;
-// use data::File;
 
 #[derive(Parser)]
 struct Cli {
